@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="{% url 'index' %}">Logo</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'materias-list' %}">Materias</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Temas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Cualquier otra cosa</a>
+    </li>
+  </ul>
+    <form class="form-inline" action="/action_page.php">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-success" type="submit">Search</button>
+  </form>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+                {% if user.is_authenticated %}
+                    <a class="nav-link" href="#">logout</a>
+                {% else %}
+                    <a class="nav-link" href="#">login</a>
+                {% endif %}
+        </li>
+      </ul>
+</nav>
