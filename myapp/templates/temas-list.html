@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>Listado de Temas </h3>
+    <ul>
+        {% for tema in temas %}
+            <li> {{ tema }} </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
+
+
