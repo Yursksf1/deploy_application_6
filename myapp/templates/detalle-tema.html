@@ -4,4 +4,10 @@
     <h3>Tema:  {{ tema.nombre }} </h3>
     <h4>Materia:  {{ tema.materia }} </h4>
     <p> {{ tema.descripcion }} </p>
+
+    <form action="" method="post">
+    {% csrf_token %}
+        <input type="text" name="prueba">
+        <button> enviar </button>
+    </form>
 {% endblock content %}

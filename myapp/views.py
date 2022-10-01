@@ -48,6 +48,13 @@ def tema_detalle(request):
         tema_name = request.GET['busqueda']
         tema = get_lista_temas(tema_name)
 
+    if request.POST and request.POST.get('prueba'):
+        prueba = request.POST.get('prueba')
+        tema_name = request.GET['busqueda']
+        tema = get_lista_temas(tema_name)
+        tema[0].descripcion = prueba
+        tema[0].save()
+
     context = {
         "tema": tema[0]
     }
