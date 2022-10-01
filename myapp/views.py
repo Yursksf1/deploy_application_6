@@ -41,9 +41,19 @@ def materia_detalle(request):
     }
     return render(request, template_name, context)
 
-def materia_detalle_1(request):
+def tema_detalle(request):
+    template_name = 'detalle-tema.html'
+    tema = get_lista_temas()
+    if request.GET and request.GET['busqueda']:
+        tema_name = request.GET['busqueda']
+        tema = get_lista_temas(tema_name)
+
+    context = {
+        "tema": tema[0]
+    }
     # your code is here
-    pass
+    return render(request, template_name, context)
+
 
 def lista_temas(request):
     template_name = 'temas-list.html'
