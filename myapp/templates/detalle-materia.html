@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>Nombre de materia:  {{ materia }} </h3>
+    <ul>
+        {% for tema in temas %}
+            <li>
+                <a href="{% url 'temas-detalle' %}?busqueda={{ tema.nombre }}"> {{ tema.nombre }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

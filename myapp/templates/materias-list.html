@@ -4,7 +4,9 @@
     <h3>Listado de Materias </h3>
     <ul>
         {% for materia in materias %}
-            <li> {{ materia }} </li>
+            <li>
+                <a href="{% url 'materia_detalle' %}?materia_name={{ materia }}"> {{ materia }}</a>
+            </li>
         {% endfor %}
     </ul>
 {% endblock content %}

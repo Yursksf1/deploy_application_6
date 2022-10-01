@@ -20,6 +20,7 @@ from myapp import views
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html'), name='index'),
+    path('materia_detalle', views.materia_detalle, name='materia_detalle'),
     path('materias', views.lista_materia, name='materias-list'),
     path('temas', views.lista_temas, name='temas-list'),
     path('admin/', admin.site.urls, name='admin'),
