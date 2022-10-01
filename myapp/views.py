@@ -41,6 +41,10 @@ def materia_detalle(request):
     }
     return render(request, template_name, context)
 
+def materia_detalle_1(request):
+    # your code is here
+    pass
+
 def lista_temas(request):
     template_name = 'temas-list.html'
     # TODO: create feature of search
